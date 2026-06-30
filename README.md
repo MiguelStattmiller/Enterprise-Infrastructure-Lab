@@ -36,9 +36,9 @@ The objective is to simulate a small enterprise infrastructure by deploying secu
 ---
 
 > [!NOTE]
-> To protect personal information, all IP addresses, hostnames, MAC addresses and other network identifiers shown throughout this repository are used **for documentation purposes only**.
+> For privacy and security reasons, sensitive network information such as IP addresses, MAC addresses, hostnames and other identifiers may be intentionally hidden or anonymized in screenshots and configuration examples.
 >
-> Any values displayed in screenshots or configuration examples have been anonymized, modified or recreated and **do not represent my personal or home network**.
+> Any values shown are for documentation purposes only and do **not** represent my personal or home network.
 
 ---
 
