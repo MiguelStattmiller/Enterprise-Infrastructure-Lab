@@ -52,9 +52,9 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ---
 
-## Lab Modules
+## Procedures
 
-- [ ] Initial Installation
+- [ ] VM Installation
 - [ ] Interface Configuration
 - [ ] WAN Configuration
 - [ ] LAN Configuration
