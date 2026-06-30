@@ -33,29 +33,18 @@ The objective is to simulate a small enterprise environment by implementing secu
 ## Lab Architecture
 
 ```text
-                             Internet
-                                 │
-                                 │
-                         WAN (Bridged)
-                                 │
-                    +------------------------+
-                    |        pfSense         |
-                    | Firewall / Gateway     |
-                    +------------------------+
-                                 │
-                         LAN (Host-Only)
-                                 │
-        ┌────────────────────────┼────────────────────────┐
-        │                        │                        │
-        │                        │                        │
-+----------------+      +----------------+      +----------------+
-| Windows Server |      | Ubuntu Server |      | Windows Client |
-|----------------|      |----------------|      |----------------|
-| Active Directory|     | Wazuh SIEM     |      | Domain Joined  |
-| DNS Server     |      | Security       |      | Workstation    |
-| DHCP Server    |      | Monitoring     |      |                |
-| Group Policies |      |                |      |                |
-+----------------+      +----------------+      +----------------+
+                    Internet
+                        │
+                 WAN (Bridged)
+                        │
+              +------------------+
+              |     pfSense      |
+              | Firewall/Gateway |
+              +------------------+
+                        │
+                 LAN (Host-Only)
+                        │
+          Enterprise Infrastructure Lab
 ```
 
 ---
