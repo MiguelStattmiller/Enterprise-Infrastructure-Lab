@@ -35,6 +35,13 @@ The objective is to simulate a small enterprise infrastructure by deploying secu
 
 ---
 
+> [!NOTE]
+> To protect personal information, all IP addresses, hostnames, MAC addresses and other network identifiers shown throughout this repository are used **for documentation purposes only**.
+>
+> Any values displayed in screenshots or configuration examples have been anonymized, modified or recreated and **do not represent my personal or home network**.
+
+---
+
 # 🎯 Objectives
 
 - Design an enterprise network architecture
