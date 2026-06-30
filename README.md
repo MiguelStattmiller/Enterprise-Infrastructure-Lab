@@ -45,14 +45,12 @@ The objective is to simulate a small enterprise infrastructure by deploying secu
 # 🎯 Objectives
 
 - Design an enterprise network architecture
-- Implement network segmentation using VLANs
 - Deploy and configure pfSense Firewall
 - Configure Windows Server infrastructure
 - Implement Active Directory, DNS and DHCP
 - Deploy Ubuntu Server services
 - Implement SIEM monitoring using Wazuh
 - Configure IDS/IPS with Snort
-- Automate security tasks with Python
 - Practice troubleshooting and systems integration
 
 ---
@@ -88,16 +86,14 @@ The objective is to simulate a small enterprise infrastructure by deploying secu
 
 | Category | Technologies |
 |----------|--------------|
-| Networking | VLANs, Routing, NAT |
 | Firewall | pfSense |
 | IDS/IPS | Snort |
 | SIEM | Wazuh |
-| Virtualization | UTM, VMware |
+| Virtualization | UTM |
 | Windows Infrastructure | Active Directory, DNS, DHCP |
 | Linux | Ubuntu Server |
 | Containers | Docker |
 | Security | Nmap |
-| Automation | Python |
 
 ---
 
