@@ -36,10 +36,10 @@ The VM uses two network interfaces:
 
 ## Network Configuration
 
-| Adapter | Purpose | Network Mode | Interface | Network Card | MAC Address |
-|---------|---------|--------------|-----------|--------------|-------------|
-| Adapter 1 | WAN | Bridged (Advanced) | Wi-Fi (en0) | Intel Gigabit Ethernet (e1000) | 3E:A9:4C:64:77:CC |
-| Adapter 2 | LAN | Host Only | Default (private) | Intel Gigabit Ethernet (e1000) | AA:99:80:96:27:BA |
+| Adapter | Purpose | Network Mode | Interface | Network Card |
+|---------|---------|--------------|-----------|--------------|
+| Adapter 1 | WAN | Bridged (Advanced) | Wi-Fi (en0) | Intel Gigabit Ethernet (e1000) | 
+| Adapter 2 | LAN | Host Only | Default (private) | Intel Gigabit Ethernet (e1000) | 
 
 ---
 
@@ -72,10 +72,6 @@ The VM uses two network interfaces:
 This virtual machine provides the network perimeter for the **Enterprise Infrastructure Lab** and will be used throughout the project to configure:
 
 - Firewall Rules
-- NAT
-- DHCP
-- DNS Resolver
-- VLANs
 - VPN
 - Network Routing
 - Traffic Monitoring
