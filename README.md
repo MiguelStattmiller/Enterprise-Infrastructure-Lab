@@ -70,7 +70,6 @@ The objective of this project is to simulate a realistic enterprise infrastructu
                     │
           ┌─────────┴─────────┐
           │                   │
-      Management VLAN     User VLAN
           │                   │
    Windows Server        Ubuntu Server
           │                   │
