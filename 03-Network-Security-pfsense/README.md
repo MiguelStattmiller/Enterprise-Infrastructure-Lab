@@ -29,25 +29,33 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ---
 
+
 ## Lab Architecture
 
-```
-                    Internet
-                        │
-                        │
-                 +---------------+
-                 |    pfSense    |
-                 +---------------+
-                  │            │
-             WAN  │            │ LAN
-                  │            │
-                  │       +-----------+
-                  │       |  Switch   |
-                  │       +-----------+
-                  │        │    │    │
-                  │        │    │    │
-                  │     Windows Ubuntu Client
-                  │      Server Server
+```text
+                             Internet
+                                 │
+                                 │
+                         WAN (Bridged)
+                                 │
+                    +------------------------+
+                    |        pfSense         |
+                    | Firewall / Gateway     |
+                    +------------------------+
+                                 │
+                         LAN (Host-Only)
+                                 │
+        ┌────────────────────────┼────────────────────────┐
+        │                        │                        │
+        │                        │                        │
++----------------+      +----------------+      +----------------+
+| Windows Server |      | Ubuntu Server |      | Windows Client |
+|----------------|      |----------------|      |----------------|
+| Active Directory|     | Wazuh SIEM     |      | Domain Joined  |
+| DNS Server     |      | Security       |      | Workstation    |
+| DHCP Server    |      | Monitoring     |      |                |
+| Group Policies |      |                |      |                |
++----------------+      +----------------+      +----------------+
 ```
 
 ---
@@ -70,15 +78,19 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ## Folder Structure
 
-```
-03-Network-Security-pfsense/
+```text
+03-Network-Security-pfSense/
 ├── README.md
 ├── Screenshots/
-├── Configs/
-├── Firewall-rules/
-├── Vlan/
-├── Vpn/
-└── Backups/
+├── configs/
+│   ├── VM-Configuration.md
+│   ├── pfSense-Configuration.md
+│   ├── Firewall-Rules.md
+│   ├── OpenVPN.md
+│   ├── Snort.md
+│   └── Squid.md
+├── backups/
+└── exports/
 ```
 
 ---
