@@ -85,7 +85,7 @@ This virtual machine provides the network perimeter for the **Enterprise Infrast
 
 The following screenshot shows the hardware configuration used to deploy the pfSense virtual machine.
 
-![System Configuration](Screenshots/01-System-Configuration.png)
+![System Configuration](../Screenshots/01-System-Configuration.png)
 
 ---
 
@@ -93,7 +93,7 @@ The following screenshot shows the hardware configuration used to deploy the pfS
 
 The WAN interface is configured in **Bridged (Advanced)** mode using the host's Wi-Fi interface (`en0`). This allows pfSense to communicate with the external network and simulate Internet connectivity.
 
-![WAN Network Adapter](Screenshots/02-WAN-Network-Adapter.png)
+![WAN Network Adapter](../Screenshots/02-WAN-Network-Adapter.png)
 
 ---
 
@@ -101,6 +101,6 @@ The WAN interface is configured in **Bridged (Advanced)** mode using the host's 
 
 The LAN interface is configured in **Host Only** mode to provide an isolated internal network for the Enterprise Infrastructure Lab.
 
-![LAN Network Adapter](Screenshots/03-LAN-Network-Adapter.png)
+![LAN Network Adapter](../Screenshots/03-LAN-Network-Adapter.png)
 
 ---
