@@ -134,18 +134,6 @@ Configuration includes:
 
 ---
 
-## SSH Administration
-
-SSH was enabled to allow secure command-line administration of pfSense.
-
-SSH is used for:
-
-- System administration
-- Troubleshooting
-- Remote maintenance
-
----
-
 ## Proxy Services
 
 ### Squid
