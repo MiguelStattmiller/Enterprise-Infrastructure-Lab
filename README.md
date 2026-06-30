@@ -56,26 +56,32 @@ The objective of this project is to simulate a realistic enterprise infrastructu
 
 ---
 
-# 🏛️ Lab Architecture
+## Lab Architecture
 
-```
-                Internet
-                    │
-             ┌────────────┐
-             │  pfSense   │
-             └────────────┘
-                    │
-          ┌─────────┴─────────┐
-          │                   │
-          │                   │
-   Windows Server        Ubuntu Server
-          │                   │
-     Active Directory      Docker
-          │                   │
-      DNS / DHCP           Wazuh SIEM
-          │                   │
-     Windows Client      Linux Client
-
+```text
+                                        Internet
+                                            │
+                                            │
+                                    WAN (Bridged)
+                                            │
+                                    +----------------+
+                                    |    pfSense     |
+                                    | Firewall/GW    |
+                                    +----------------+
+                                            │
+                                    LAN (Host-Only)
+                                            │
+        ┌───────────────────────────┼───────────────────────────┐
+        │                           │                           │
+        │                           │                           │
++--------------------+     +--------------------+     +--------------------+
+|   Windows Server   |     |   Ubuntu Server    |     |  Windows Client    |
+|--------------------|     |--------------------|     |--------------------|
+| Active Directory   |     | Wazuh SIEM         |     | Domain Joined      |
+| DNS Server         |     | Dashboard          |     | Enterprise Client  |
+| DHCP Server        |     | Indexer            |     | GPO Applied        |
+| Group Policies     |     | Manager            |     |                    |
++--------------------+     +--------------------+     +--------------------+
 ```
 
 ---
