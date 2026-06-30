@@ -101,43 +101,6 @@ The project focuses on understanding not only **how** technologies work individu
 08-security-testing/
 09-python-automation/
 10-documentation/
-```
 
----
 
-# 📈 Skills Demonstrated
 
-- Systems Integration
-- Systems Engineering
-- Network Design
-- Infrastructure Deployment
-- Cybersecurity
-- Network Security
-- Windows Administration
-- Linux Administration
-- SIEM Deployment
-- Infrastructure Troubleshooting
-- Python Automation
-
----
-
-# 🚀 Future Improvements
-
-- Azure Integration
-- Microsoft Entra ID
-- PowerShell Automation
-- Infrastructure as Code
-- Backup & Disaster Recovery
-- Monitoring Dashboard
-- Enterprise VPN
-- Multi-site Network
-
----
-
-## 👨‍💻 Author
-
-**Miguel Stattmiller Albuquerque**
-
-Electrical Engineer • Systems Integration • Networks & Cybersecurity
-
-[LinkedIn](https://linkedin.com/in/miguel-stattmiller-albuquerque)
