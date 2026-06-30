@@ -27,11 +27,11 @@ This project is part of my **Enterprise Infrastructure Lab**, a virtual enterpri
 
 The lab simulates a small enterprise network composed of three virtual machines:
 
-- **pfSense Community Edition** – Enterprise firewall, network gateway, routing, OpenVPN remote access, Snort IDS/IPS, Squid Proxy and SquidGuard web filtering.
-- **Windows Server** – Active Directory Domain Services (AD DS), DNS, DHCP integration, Group Policy Objects (GPOs), centralized authentication and enterprise infrastructure management.
-- **Ubuntu Server** – Wazuh SIEM platform for centralized log collection, monitoring and security event analysis.
+- **pfSense Community Edition** – Enterprise firewall, network gateway, routing, NAT, DNS, DHCP, OpenVPN remote access, Snort IDS/IPS, Squid Proxy and SquidGuard web filtering.
+- **Windows Server** – Active Directory Domain Services (AD DS), DNS, DHCP integration, Organizational Units (OUs), Group Policy Objects (GPOs), centralized authentication and enterprise infrastructure management.
+- **Ubuntu Desktop** – Linux administration and deployment of the Wazuh SIEM platform for centralized log collection, monitoring and security event analysis.
 
-The Windows Server acts as the central management server for the environment, allowing domain administration and providing authenticated access to enterprise resources, including the Wazuh SIEM platform.
+The environment is intentionally configured as an **IPv4-only network**, with **IPv6 disabled** across the lab to simplify deployment and focus on core enterprise networking, infrastructure and security concepts.
 
 The objective of this project is to simulate a realistic enterprise infrastructure by integrating secure networking, centralized identity management, endpoint administration and security monitoring within an isolated virtual environment.
 
