@@ -31,10 +31,9 @@ The lab simulates a small enterprise network composed of three virtual machines:
 - **Windows Server** – Active Directory Domain Services (AD DS), DNS, DHCP integration, Organizational Units (OUs), Group Policy Objects (GPOs), centralized authentication and enterprise infrastructure management.
 - **Ubuntu Desktop** – Linux administration and deployment of the Wazuh SIEM platform for centralized log collection, monitoring and security event analysis.
 
-The environment is intentionally configured as an **IPv4-only network**, with **IPv6 disabled** across the lab to simplify deployment and focus on core enterprise networking, infrastructure and security concepts.
+The environment is intentionally configured as an **IPv4-only network**, with **IPv6 disabled** to reduce unnecessary complexity and maintain the focus on core enterprise infrastructure technologies. This approach simplifies the deployment of firewall policies, Active Directory, DNS, DHCP, VPN services and security monitoring without requiring parallel IPv6 configurations. IPv6 can be incorporated in future iterations of the lab as additional networking scenarios are developed.
 
 The objective of this project is to simulate a realistic enterprise infrastructure by integrating secure networking, centralized identity management, endpoint administration and security monitoring within an isolated virtual environment.
-
 ---
 
 > [!NOTE]
