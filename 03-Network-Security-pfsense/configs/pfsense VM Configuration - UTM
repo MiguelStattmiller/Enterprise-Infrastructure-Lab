@@ -1,0 +1,71 @@
+# pfSense VM Configuration - UTM
+
+This document describes the virtual machine configuration used to deploy **pfSense Community Edition** in the **Enterprise Infrastructure Lab**.
+
+---
+
+## Overview
+
+pfSense is deployed as the **firewall and network gateway** for the lab environment.
+
+The virtual machine was created and configured using **UTM on macOS**.
+
+The VM uses two network interfaces:
+
+- **WAN** - Bridged network for external/internet access
+- **LAN** - Host Only network for the internal lab environment
+
+---
+
+## VM Summary
+
+| Parameter | Configuration |
+|----------|---------------|
+| Virtual Machine Name | Pfsense - CIBER |
+| Hypervisor | UTM |
+| Operating System | pfSense Community Edition |
+| Architecture | x86_64 |
+| Machine Type | Standard PC (Q35 + ICH9, 2009) |
+| Memory | 4 GB |
+| Disk Size | 6.09 GB |
+| CPU Cores | 3 |
+| Network Card Model | Intel Gigabit Ethernet (e1000) |
+
+---
+
+## Network Configuration
+
+| Adapter | Purpose | Network Mode | Interface | Network Card | MAC Address |
+|--------|---------|--------------|-----------|--------------|-------------|
+| Adapter 1 | WAN | Bridged (Advanced) | Wi-Fi (en0) | Intel Gigabit Ethernet (e1000) | 3E:A9:4C:64:77:CC |
+| Adapter 2 | LAN | Host Only | Default (private) | Intel Gigabit Ethernet (e1000) | AA:99:80:96:27:BA |
+
+---
+
+## Network Design
+
+```text
+Internet / Home Network
+        |
+        | Bridged Adapter
+        |
++------------------+
+|     pfSense      |
+|                  |
+|  WAN        LAN  |
++---|----------|---+
+    |          |
+    |          | Host Only Network
+    |          |
+    |     Internal Lab Network
+    |          |
+    |    +-------------+
+    |    | Windows     |
+    |    | Server      |
+    |    +-------------+
+    |
+    |    +-------------+
+    |    | Ubuntu      |
+    |    | Desktop     |
+    |    | Wazuh SIEM  |
+    |    +-------------+
