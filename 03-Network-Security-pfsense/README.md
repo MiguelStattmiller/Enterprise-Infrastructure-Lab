@@ -75,7 +75,7 @@ The objective is to simulate a small enterprise environment by implementing secu
 ## Folder Structure
 
 ```
-03-pfsense-firewall/
+03-Network-Security-pfsense/
 │
 ├── README.md
 ├── Screenshots/
