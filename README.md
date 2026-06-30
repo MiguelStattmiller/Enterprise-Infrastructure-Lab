@@ -11,7 +11,7 @@
 [![Windows Server](https://img.shields.io/badge/Windows_Server-AD/DNS/DHCP-0078D6?style=for-the-badge)]
 [![Ubuntu](https://img.shields.io/badge/Ubuntu_Server-Linux-E95420?style=for-the-badge)]
 [![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?style=for-the-badge)]
-[![Python](https://img.shields.io/badge/Python-Automation-3776AB?style=for-the-badge)]
+
 
 ---
 
