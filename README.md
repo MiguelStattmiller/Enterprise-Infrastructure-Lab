@@ -23,16 +23,15 @@ Design, deployment and documentation of a complete enterprise infrastructure lab
 
 ## Project Overview
 
-This project is part of my **Enterprise Infrastructure Lab**, a virtual environment fully built using **UTM** on macOS.
+This project is part of my Enterprise Infrastructure Lab, a virtual environment fully built using **UTM** on macOS.
 
-The lab consists of multiple virtual machines, including:
+The lab consists of three virtual machines:
 
-- pfSense Community Edition
-- Windows Server
-- Windows 11 Client
-- Ubuntu Server
+- **pfSense Community Edition** – Firewall and Network Gateway
+- **Windows Server** – Active Directory and Infrastructure Services
+- **Ubuntu Server** – Hosting the Wazuh SIEM platform
 
-Within this module, pfSense is deployed as the perimeter firewall and network gateway, providing routing, firewall services, DHCP, DNS and secure connectivity between the virtual machines.
+The objective is to simulate a small enterprise infrastructure by deploying secure networking, centralized identity management and security monitoring within an isolated virtual environment.
 
 ---
 
