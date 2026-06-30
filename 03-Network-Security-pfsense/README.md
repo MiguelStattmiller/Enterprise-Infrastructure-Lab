@@ -78,7 +78,6 @@ The objective is to simulate a small enterprise environment by implementing secu
 03-pfsense-firewall/
 │
 ├── README.md
-├── screenshots/
 ├── configs/
 ├── firewall-rules/
 ├── vlan/
