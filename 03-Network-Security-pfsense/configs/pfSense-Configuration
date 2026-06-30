@@ -4,7 +4,7 @@ This document describes the configuration performed on **pfSense Community Editi
 
 ---
 
-# Overview
+## Overview
 
 pfSense is deployed as the **perimeter firewall and network gateway** of the Enterprise Infrastructure Lab.
 
@@ -12,21 +12,21 @@ The firewall is responsible for controlling traffic between the Internet and the
 
 The configuration includes:
 
-- WAN and LAN network interfaces
+- WAN and LAN interfaces
 - Stateful Firewall
-- Network Address Translation (NAT)
+- NAT
 - OpenVPN Remote Access
-- Internal Certificate Authority (CA)
-- Squid Proxy Server
+- Certificate Authority (CA)
+- Squid Proxy
 - SquidGuard URL Filtering
 - Snort IDS/IPS
-- IPv6 disabled to simplify the laboratory environment and reduce unnecessary attack surface
+- IPv6 disabled
 
-Unlike many standalone pfSense deployments, **DNS**, **DHCP**, **Active Directory**, and **Group Policy** services are hosted on the **Windows Server** within the lab. pfSense therefore operates strictly as the perimeter firewall and secure network gateway.
+Unlike traditional pfSense deployments, **DNS**, **DHCP**, **Active Directory**, and **Group Policy Objects (GPOs)** are provided by the **Windows Server**, while pfSense operates strictly as the network gateway and security appliance.
 
 ---
 
-# System Overview
+## System Overview
 
 The pfSense firewall was successfully deployed and initialized with dedicated WAN and LAN interfaces.
 
@@ -34,233 +34,173 @@ The pfSense firewall was successfully deployed and initialized with dedicated WA
 
 ---
 
-# System Information
+## System Information
 
-The firewall is running **pfSense Community Edition 2.7.2** inside a virtual machine hosted on **UTM for macOS**.
-
-The system information confirms the successful deployment of the firewall appliance and its operating environment.
+The firewall is running **pfSense Community Edition 2.7.2** on a virtual machine hosted in **UTM for macOS**.
 
 ![System Information](../Screenshots/05-System-Information.png)
 
 ---
 
-# Network Interfaces
+## Network Interfaces
 
-Two network interfaces were configured.
+Two interfaces were configured.
 
 | Interface | Purpose |
 |-----------|----------|
 | WAN | External network connectivity (Bridged Adapter) |
-| LAN | Internal isolated enterprise network |
+| LAN | Internal enterprise network |
 
 ![Network Interfaces](../Screenshots/06-Network-Interfaces.png)
 
 ---
 
-# WAN Configuration
+## WAN Configuration
 
-The WAN interface is configured using a **Bridged Adapter** connected to the host's physical network.
+The WAN interface receives its IPv4 configuration through DHCP from the external network.
 
-Characteristics:
+Its primary functions are:
 
-- DHCP Address Assignment
-- Internet Connectivity
-- OpenVPN Endpoint
-- Receives traffic from external networks
-
----
-
-# LAN Configuration
-
-The LAN interface provides the isolated internal network used by all enterprise virtual machines.
-
-Characteristics:
-
-- Static IPv4 Address
-- Internal Enterprise Network
-- Default Gateway for Domain Clients
-- Routing between internal hosts and external networks
-
-Windows Server clients use this interface as their default gateway.
+- Internet connectivity
+- OpenVPN endpoint
+- External firewall protection
 
 ---
 
-# IPv6 Configuration
+## LAN Configuration
 
-IPv6 was intentionally disabled throughout the laboratory.
+The LAN interface provides connectivity for the internal enterprise infrastructure.
 
-This project focuses on IPv4 enterprise networking, Active Directory integration, and security monitoring.
+The Windows Server uses this interface as its default gateway.
 
-Disabling IPv6:
+Responsibilities include:
 
-- Simplifies network management
-- Prevents unused protocols from introducing additional attack surface
-- Avoids accidental IPv6 communication bypassing IPv4 firewall policies
-- Keeps the environment focused on enterprise IPv4 deployments
-
----
-
-# DNS and DHCP Architecture
-
-Unlike traditional pfSense deployments, this laboratory centralizes infrastructure services on **Windows Server**.
-
-The Windows Server provides:
-
-- Active Directory Domain Services (AD DS)
-- DNS Server
-- DHCP Server
-- Group Policy Objects (GPOs)
-
-All domain clients receive their IP configuration and DNS information directly from Windows Server.
-
-pfSense remains responsible only for:
-
-- Layer 3 routing
+- Internal routing
 - Gateway services
-- NAT
-- Firewall enforcement
-- Secure external connectivity
+- Access to external networks
 
 ---
 
-# Firewall Rules
+## IPv6 Configuration
 
-Firewall rules were configured following the principle of least privilege.
+IPv6 was intentionally disabled across the laboratory.
 
-Only the required traffic is permitted while all other unsolicited inbound traffic remains blocked.
+This simplifies the environment, keeps the project focused on IPv4 enterprise networking, and reduces unnecessary attack surface.
 
 ---
 
-## WAN Rules
+## Firewall Rules
 
-The WAN interface exposes only the OpenVPN service required for secure remote administration.
+### WAN Rules
+
+Only the OpenVPN service is exposed externally.
 
 ![WAN Firewall Rules](../Screenshots/08-WAN-Firewall-Rules.png)
 
 ---
 
-## LAN Rules
+### LAN Rules
 
-Internal clients are permitted to access external networks while remaining protected from unsolicited inbound Internet traffic.
+LAN clients are allowed outbound connectivity while inbound Internet traffic remains blocked by default.
 
 ![LAN Firewall Rules](../Screenshots/09-LAN-firewall-Rules.png)
 
 ---
 
-# Certificate Authority (CA)
+## Certificate Authority
 
-An internal **Certificate Authority (CA)** was created within pfSense.
+An internal Certificate Authority (CA) was created for certificate-based VPN authentication.
 
-The CA issues certificates used by OpenVPN for certificate-based authentication.
+The CA is responsible for:
 
-Using an internal CA allows:
-
-- Secure client authentication
-- Certificate management
-- Certificate revocation
-- Encrypted VPN communications
+- Issuing VPN certificates
+- Authenticating VPN clients
+- Managing certificate trust
 
 ![Certificate Authority](../Screenshots/07-Certificate-Authority.png)
 
 ---
 
-# OpenVPN
+## OpenVPN
 
 OpenVPN provides encrypted remote access to the Enterprise Infrastructure Lab.
 
 Configuration includes:
 
-- UDP Transport
-- Certificate-Based Authentication
-- Dedicated VPN Tunnel
-- Firewall Integration
-
-Authenticated users can securely access internal lab resources from external networks.
+- UDP transport
+- Certificate-based authentication
+- Dedicated VPN tunnel
+- Firewall integration
 
 ---
 
-# Secure Shell (SSH)
+## SSH Administration
 
-SSH was enabled to allow secure remote administration of the pfSense firewall.
+SSH was enabled to allow secure command-line administration of pfSense.
 
-Administrative access is encrypted and can be used for:
+SSH is used for:
 
-- System maintenance
-- Advanced troubleshooting
-- Command-line administration
+- System administration
+- Troubleshooting
+- Remote maintenance
 
 ---
 
-# Proxy Services
+## Proxy Services
 
-## Squid Proxy
+### Squid
 
-Squid was deployed as the laboratory's forward proxy server.
+Squid provides:
 
-Main functions include:
-
-- HTTP/HTTPS proxy services
+- HTTP/HTTPS proxy
 - Web caching
 - Traffic optimization
-- Centralized Internet access
 
----
+### SquidGuard
 
-## SquidGuard
-
-SquidGuard extends Squid by providing web filtering capabilities.
-
-It allows:
+SquidGuard extends Squid with:
 
 - URL filtering
-- Category-based website blocking
-- Content access policies
-- Internet usage control
+- Website categorization
+- Access control
 
 ---
-
-# Intrusion Detection and Prevention
 
 ## Snort IDS/IPS
 
-Snort was installed as the network Intrusion Detection and Prevention System.
+Snort was deployed as the network Intrusion Detection and Prevention System.
 
-Its role within the laboratory is to:
+It will later be integrated with Wazuh to demonstrate:
 
-- Detect malicious traffic
-- Identify known attack signatures
-- Generate security alerts
-- Block malicious connections (IPS mode)
-
-Snort will later be integrated with the Wazuh SIEM platform to demonstrate centralized security monitoring and attack detection.
+- Attack detection
+- Alert generation
+- Traffic blocking
+- Centralized monitoring
 
 ---
 
-# Services
+## Services Summary
 
-The primary security services implemented in pfSense include:
+| Service | Purpose |
+|---------|---------|
+| Firewall | Traffic filtering |
+| NAT | Internet access |
+| OpenVPN | Secure remote access |
+| CA | VPN certificates |
+| Squid | Proxy server |
+| SquidGuard | Web filtering |
+| Snort | IDS/IPS |
 
-- Stateful Firewall
-- NAT
-- OpenVPN
-- Certificate Authority
-- Squid Proxy
-- SquidGuard
-- Snort IDS/IPS
-
-Core infrastructure services such as **DNS**, **DHCP**, **Active Directory**, and **Group Policy** are intentionally provided by the Windows Server to simulate a real enterprise environment.
+Infrastructure services such as **Active Directory**, **DNS**, **DHCP**, and **Group Policy Objects** are hosted on the Windows Server.
 
 ---
 
-# Next Steps
+## Next Steps
 
-The following phase of the project focuses on operational validation.
-
-Future documentation will demonstrate:
+The next stage of the project will demonstrate:
 
 - Snort rule configuration
 - Kali Linux attack simulation
-- Detection of malicious activity
-- Alert generation
+- Detection and blocking of malicious traffic
 - Wazuh SIEM integration
 - Centralized security monitoring
