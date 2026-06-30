@@ -54,8 +54,8 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ## Procedures
 
-- [ ] VM Installation
-- [ ] Interface Configuration
+- [ ] VM Installation and configuration
+- [ ] pfSense Configuration
 - [ ] WAN Configuration
 - [ ] LAN Configuration
 - [ ] Firewall Rules
