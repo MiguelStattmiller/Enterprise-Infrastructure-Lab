@@ -21,11 +21,18 @@ Design, deployment and documentation of a complete enterprise infrastructure lab
 
 ---
 
-# 📖 Project Overview
+## Project Overview
 
-This laboratory simulates a small enterprise infrastructure where multiple technologies are integrated into a secure and scalable environment.
+This project is part of my **Enterprise Infrastructure Lab**, a virtual environment fully built using **UTM** on macOS.
 
-The project focuses on understanding not only **how** technologies work individually, but also **how they interact together** inside a production-like infrastructure.
+The lab consists of multiple virtual machines, including:
+
+- pfSense Community Edition
+- Windows Server
+- Windows 11 Client
+- Ubuntu Server
+
+Within this module, pfSense is deployed as the perimeter firewall and network gateway, providing routing, firewall services, DHCP, DNS and secure connectivity between the virtual machines.
 
 ---
 
