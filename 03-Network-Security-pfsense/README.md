@@ -79,11 +79,11 @@ The objective is to simulate a small enterprise environment by implementing secu
 │
 ├── README.md
 ├── Screenshots/
-├── configs/
-├── firewall-rules/
-├── vlan/
-├── vpn/
-└── backups/
+├── Configs/
+├── Firewall-rules/
+├── Vlan/
+├── Vpn/
+└── Backups/
 ```
 
 ---
