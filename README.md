@@ -62,8 +62,6 @@ The objective of this project is to simulate a realistic enterprise infrastructu
 ```
                 Internet
                     │
-              ISP Router
-                    │
              ┌────────────┐
              │  pfSense   │
              └────────────┘
