@@ -88,8 +88,3 @@ The objective is to simulate a small enterprise environment by implementing secu
 ---
 
 
-
-
-## Screenshots
-
-Screenshots demonstrating each configuration step will be added during the project.
