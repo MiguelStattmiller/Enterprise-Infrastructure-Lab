@@ -23,15 +23,17 @@ Design, deployment and documentation of a complete enterprise infrastructure lab
 
 ## Project Overview
 
-This project is part of my Enterprise Infrastructure Lab, a virtual environment fully built using **UTM** on macOS.
+This project is part of my **Enterprise Infrastructure Lab**, a virtual enterprise environment built entirely using **UTM on macOS**.
 
-The lab consists of three virtual machines:
+The lab simulates a small enterprise network composed of three virtual machines:
 
-- **pfSense Community Edition** – Firewall and Network Gateway
-- **Windows Server** – Active Directory and Infrastructure Services
-- **Ubuntu Server** – Hosting the Wazuh SIEM platform
+- **pfSense Community Edition** – Enterprise firewall, network gateway, routing, OpenVPN remote access, Snort IDS/IPS, Squid Proxy and SquidGuard web filtering.
+- **Windows Server** – Active Directory Domain Services (AD DS), DNS, DHCP integration, Group Policy Objects (GPOs), centralized authentication and enterprise infrastructure management.
+- **Ubuntu Server** – Wazuh SIEM platform for centralized log collection, monitoring and security event analysis.
 
-The objective is to simulate a small enterprise infrastructure by deploying secure networking, centralized identity management and security monitoring within an isolated virtual environment.
+The Windows Server acts as the central management server for the environment, allowing domain administration and providing authenticated access to enterprise resources, including the Wazuh SIEM platform.
+
+The objective of this project is to simulate a realistic enterprise infrastructure by integrating secure networking, centralized identity management, endpoint administration and security monitoring within an isolated virtual environment.
 
 ---
 
