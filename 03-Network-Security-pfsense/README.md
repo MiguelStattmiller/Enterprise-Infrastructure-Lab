@@ -30,7 +30,7 @@ The objective is to simulate a small enterprise environment by implementing secu
 ---
 
 
-## Lab Architecture
+## pfSense Architecture
 
 ```text
                     Internet
