@@ -40,7 +40,7 @@ Main responsibilities:
 
 The firewall was successfully deployed using **pfSense Community Edition 2.7.2** on a dedicated virtual machine hosted in **UTM for macOS**.
 
-![System Overview](Screenshots/04-pfSense-Console-Overview.png)
+![System Overview](../Screenshots/04-pfSense-Console-Overview.png)
 
 ---
 
@@ -48,7 +48,7 @@ The firewall was successfully deployed using **pfSense Community Edition 2.7.2**
 
 The following screenshot shows the deployed firewall version and hardware information.
 
-![System Information](Screenshots/05-System-Information.png)
+![System Information](../Screenshots/05-System-Information.png)
 
 ---
 
@@ -61,7 +61,7 @@ Two interfaces were configured.
 | WAN | DHCP | Internet connectivity |
 | LAN | Static | Enterprise internal network |
 
-![Interfaces](Screenshots/06-Network-Interfaces.png)
+![Network Interfaces](../Screenshots/06-Network-Interfaces.png)
 
 ---
 
@@ -115,7 +115,7 @@ Only the OpenVPN service is exposed externally.
 | Allow | UDP | 1194 | OpenVPN |
 | Block | Any | Any | Default deny |
 
-![WAN Rules](Screenshots/08-WAN-Firewall-Rules.png)
+![WAN Firewall Rules](../Screenshots/08-WAN-Firewall-Rules.png)
 
 ---
 
@@ -128,7 +128,7 @@ Internal clients are allowed outbound connectivity.
 | Allow | LAN | Any | Internet access |
 | Anti-Lockout | LAN | Firewall | Web Management |
 
-![LAN Rules](Screenshots/09-LAN-Firewall-Rules.png)
+![LAN Firewall Rules](../Screenshots/09-LAN-firewall-Rules.png)
 
 ---
 
@@ -142,7 +142,7 @@ Purpose:
 - Authenticate VPN clients
 - Manage certificate trust
 
-![Certificate Authority](Screenshots/07-Certificate-Authority.png)
+![Certificate Authority](../Screenshots/07-Certificate-Authority.png)
 
 ---
 
