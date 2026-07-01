@@ -33,29 +33,34 @@ flowchart TD
 
 ## Objectives
 
-- Deploy pfSense Community Edition as the perimeter firewall
-- Configure WAN and LAN interfaces
-- Configure IPv4 networking
-- Implement firewall rules
-- Configure OpenVPN remote access
-- Create an internal Certificate Authority (CA)
-- Deploy Squid Proxy
-- Configure SquidGuard URL filtering
-- Deploy Snort IDS/IPS
-- Document the complete firewall configuration
+| Objective | Description |
+|-----------|-------------|
+| Deploy pfSense | Deploy pfSense Community Edition as the perimeter firewall |
+| Network Configuration | Configure WAN and LAN interfaces |
+| IPv4 Networking | Configure IPv4 addressing |
+| Firewall | Implement firewall rules |
+| OpenVPN | Configure remote VPN access |
+| Certificate Authority | Create an internal CA |
+| Squid Proxy | Deploy transparent web proxy |
+| SquidGuard | Configure URL filtering |
+| Snort IDS/IPS | Deploy intrusion detection and prevention |
+| Documentation | Document the complete firewall configuration |
 
+---
 
 ## Configuration Sections
 
-- VM Installation and Configuration
-- WAN Interface Configuration
-- LAN Interface Configuration
-- Firewall Rules
-- Certificate Authority
-- OpenVPN
-- Squid Proxy
-- SquidGuard
-- Snort IDS/IPS
+| Section | Description |
+|---------|-------------|
+| VM Installation | Virtual machine deployment and initial configuration |
+| WAN Configuration | Internet-facing interface configuration |
+| LAN Configuration | Internal network configuration |
+| Firewall Rules | Inbound and outbound filtering policies |
+| Certificate Authority | Internal PKI configuration |
+| OpenVPN | Remote access VPN configuration |
+| Squid Proxy | Transparent web proxy configuration |
+| SquidGuard | URL filtering configuration |
+| Snort IDS/IPS | Intrusion detection and prevention configuration |
 
 ---
 
