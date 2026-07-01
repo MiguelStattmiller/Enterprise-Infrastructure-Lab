@@ -95,7 +95,6 @@ An internal Certificate Authority (CA) was created for OpenVPN certificate authe
 # OpenVPN
 
 OpenVPN was configured to provide secure remote access to the Enterprise Infrastructure Lab using certificate-based authentication over UDP.
-Configuration highlights.
 
 Configuration:
 
