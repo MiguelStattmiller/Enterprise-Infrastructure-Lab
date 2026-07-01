@@ -116,15 +116,7 @@ Squid was configured as a transparent proxy to monitor and control web traffic g
 # Snort IDS/IPS
 
 Snort was deployed as the Intrusion Detection and Prevention System (IDS/IPS) for the enterprise network.
-
-Current configuration includes:
-
-- WAN interface monitoring
-- Automatic signature matching
-- Legacy IPS blocking mode
-- Real-time traffic inspection
-
-Snort is prepared for integration with Wazuh SIEM to provide centralized alert management and security monitoring.
+It is prepared for integration with Wazuh SIEM to provide centralized alert management and security monitoring.
 
 ![Snort](../Screenshots/11-Snort.png)
 
