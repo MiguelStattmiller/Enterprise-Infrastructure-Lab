@@ -183,12 +183,4 @@ Infrastructure services such as **Active Directory**, **DNS**, **DHCP**, and **G
 
 ---
 
-## Next Steps
 
-The next stage of the project will demonstrate:
-
-- Snort rule configuration
-- Kali Linux attack simulation
-- Detection and blocking of malicious traffic
-- Wazuh SIEM integration
-- Centralized security monitoring
