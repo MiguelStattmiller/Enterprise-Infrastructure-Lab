@@ -65,36 +65,30 @@ Two interfaces were configured.
 
 ---
 
-# WAN Configuration
+## WAN Configuration
+
+The WAN interface is configured in **DHCP mode** using a **Bridged Adapter**, allowing the firewall to obtain an IPv4 address from the external network.
 
 Configuration:
 
-- DHCP IPv4
-- Bridged Adapter
-- Internet-facing interface
-- OpenVPN endpoint
-
-Responsibilities:
-
-- Internet connectivity
-- Incoming VPN connections
-- External traffic filtering
+- IPv4 Configuration: DHCP
+- IPv6: Disabled
+- Network Adapter: Bridged
+- Interface: WAN
+- Purpose: Internet connectivity
 
 ---
 
-# LAN Configuration
+## LAN Configuration
+
+The LAN interface provides the internal enterprise network used by the laboratory virtual machines.
 
 Configuration:
 
-- Static IPv4 network
-- Enterprise gateway
-- Default gateway for all internal systems
-
-Responsibilities:
-
-- Internal routing
-- Internet access through NAT
-- Communication with Windows Server, Ubuntu Server and Windows Client
+- IPv4 Address: xxx.xxx.xxx.xxx/24
+- DHCP Server: Disabled (provided by Windows Server)
+- IPv6: Disabled
+- Default Gateway for internal hosts
 
 ---
 
