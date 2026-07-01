@@ -120,21 +120,6 @@ Scope configuration:
 
 ---
 
-# Windows Server Roles Summary
-
-| Role | Status |
-|---------|--------|
-| Active Directory Domain Services | ✅ Operational |
-| Domain Controller | ✅ Operational |
-| DNS Server | ✅ Operational |
-| DHCP Server | ✅ Operational |
-| Windows Defender Firewall | ✅ Enabled |
-| File and Storage Services | ✅ Operational |
-| Remote Management | ✅ Enabled |
-| Remote Desktop | ❌ Disabled |
-
----
-
 # Security Configuration
 
 The Windows Server has been configured following basic security best practices.
