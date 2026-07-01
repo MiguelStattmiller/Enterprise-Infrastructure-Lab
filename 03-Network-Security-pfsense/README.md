@@ -21,16 +21,6 @@ The objective is to simulate a small enterprise environment by implementing secu
 - Deploy Snort IDS/IPS
 - Document the complete firewall configuration
 
----
-
-## Technologies
-
-- pfSense Community Edition
-- UTM Virtualization
-
----
-
-
 ## pfSense Architecture
 
 ```mermaid
