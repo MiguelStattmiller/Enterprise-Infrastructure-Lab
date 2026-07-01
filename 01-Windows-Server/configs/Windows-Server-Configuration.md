@@ -8,14 +8,6 @@ This document describes the configuration implemented on **Microsoft Windows Ser
 
 The Active Directory Administrative Center provides the modern administrative interface used to manage the Active Directory environment.
 
-Main features:
-
-- User Management
-- Group Management
-- Password Reset
-- Global Search
-- Domain Administration
-
 ![Active Directory Administrative Center](../Screenshots/01-AD-Administrative-Center.png)
 
 ---
@@ -93,14 +85,6 @@ Configuration:
 
 Active Directory Users and Computers (ADUC) provides the classic administrative interface used to manage the Active Directory objects.
 
-Managed objects include:
-
-- Domain Controllers
-- Users
-- Groups
-- Computers
-- Organizational Units
-- Security Principals
 
 ![Active Directory Users and Computers](../Screenshots/06-AD-Users.png)
 
@@ -134,15 +118,6 @@ Scope configuration:
 | Router | Default Gateway |
 | DNS Server | Internal DNS Resolution |
 | DNS Domain Name | Active Directory Domain |
-
-Features:
-
-- IPv4 Scope
-- Address Pool
-- Address Leases
-- Reservations
-- Scope Options
-- DHCP Policies
 
 ![DHCP Server](../Screenshots/08-DHCP.png)
 
