@@ -24,35 +24,50 @@ The objective is to simulate a small enterprise environment by implementing cent
 
 ---
 
-## Windows Server Architecture
+# Infrastructure Overview
 
 ```mermaid
-flowchart TD
+flowchart LR
 
-    PF["pfSense<br/>Firewall / Gateway"]
+    Internet((Internet))
 
-    LAN["LAN Network<br/>Host-Only"]
+    pfSense["pfSense 2.7.2
+    Firewall / VPN / IDS"]
 
-    WS["Windows Server<br/><br/>Domain Controller<br/>DNS Server<br/>DHCP Server<br/>Group Policy"]
+    DC["Windows Server 2022
+    Domain Controller"]
 
-    CLIENT["Windows Client<br/><br/>Domain Joined<br/>Enterprise Workstation"]
+    AD["Active Directory
+    Domain Services"]
 
-    AD["Active Directory"]
-    DNS["DNS"]
-    DHCP["DHCP"]
-    GPO["Group Policy"]
+    DNS["DNS Server"]
 
-    PF --> LAN
-    LAN --> WS
-    LAN --> CLIENT
+    DHCP["DHCP Server"]
 
-    WS --> AD
-    WS --> DNS
-    WS --> DHCP
-    WS --> GPO
+    FW["Windows Defender
+    Firewall"]
 
-    CLIENT --> WS
+    FS["File & Storage
+    Services"]
+
+    Clients["Domain Clients"]
+
+    Internet --> pfSense
+
+    pfSense --> DC
+
+    DC --> AD
+    DC --> DNS
+    DC --> DHCP
+    DC --> FW
+    DC --> FS
+
+    DHCP --> Clients
+    DNS --> Clients
+    AD --> Clients
 ```
+
+---
 
 ## Configuration Sections
 
