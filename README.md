@@ -105,9 +105,9 @@ The objective of this project is to simulate a realistic enterprise infrastructu
 # 📂 Repository Structure
 
 ```
-01-network-security-pfsense/
-02-windows-server/
-03-wazuh-siem/
+01-windows-server/
+02-wazuh-siem/
+03-network-security-pfsense/
 04-validation/
 
 
