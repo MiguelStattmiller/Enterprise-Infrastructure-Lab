@@ -64,8 +64,8 @@ Only the OpenVPN service is exposed externally.
 
 | Action | Protocol | Port | Purpose |
 |---------|----------|------|---------|
-| Allow | UDP | 1194 | OpenVPN |
-| Block | Any | Any | Default deny |
+| Allow | UDP | 1194 | OpenVPN Remote Access |
+| Implicit Deny | Any | Any | Block all other inbound traffic |
 
 ![WAN Firewall Rules](../Screenshots/08-WAN-Firewall-Rules.png)
 
@@ -77,8 +77,8 @@ Internal clients are allowed outbound connectivity.
 
 | Action | Source | Destination | Purpose |
 |---------|--------|-------------|---------|
-| Allow | LAN | Any | Internet access |
-| Anti-Lockout | LAN | Firewall | Web Management |
+| Allow | LAN | Any | Allow outbound traffic |
+| Anti-Lockout | LAN | Firewall | Prevent administrative lockout |
 
 ![LAN Firewall Rules](../Screenshots/09-LAN-firewall-Rules.png)
 
