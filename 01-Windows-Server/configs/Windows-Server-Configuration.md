@@ -102,7 +102,7 @@ Managed objects include:
 - Organizational Units
 - Security Principals
 
-![Active Directory Users and Computers](../Screenshots/06-AD-Users-and-Computers.png)
+![Active Directory Users and Computers](../Screenshots/06-AD-Users and Computers.png)
 
 ---
 
