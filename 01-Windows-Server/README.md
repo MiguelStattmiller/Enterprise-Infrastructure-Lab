@@ -49,15 +49,18 @@ flowchart LR
 
 ## Objectives
 
-- Deploy Microsoft Windows Server 2022
-- Configure a static IPv4 address
-- Deploy Active Directory Domain Services (AD DS)
-- Promote the server to a Domain Controller
-- Configure DNS Server
-- Configure DHCP Server
-- Configure Windows Defender Firewall
-- Prepare the environment for Windows domain clients
-- Document the complete infrastructure
+| Objective | Description |
+|-----------|-------------|
+| Windows Server Deployment | Deploy Microsoft Windows Server 2022 |
+| Static Networking | Configure a static IPv4 address |
+| Active Directory | Deploy Active Directory Domain Services (AD DS) |
+| Domain Controller | Promote the server to a Domain Controller |
+| DNS | Configure the DNS Server role |
+| DHCP | Configure the DHCP Server role |
+| Windows Defender Firewall | Configure the Windows Defender Firewall |
+| Domain Infrastructure | Prepare the environment for Windows domain clients |
+| Documentation | Document the complete infrastructure |
+
   
 ---
 
