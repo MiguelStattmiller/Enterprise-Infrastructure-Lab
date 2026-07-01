@@ -58,30 +58,29 @@ The environment consists of:
 
 ## Lab Architecture
 
-```text
-                                        Internet
-                                            │
-                                            │
-                                    WAN (Bridged)
-                                            │
-                                    +----------------+
-                                    |    pfSense     |
-                                    |    Firewall    |
-                                    +----------------+
-                                            │
-                                    LAN (Host-Only)
-                                            │
-        ┌───────────────────────────┼───────────────────────────┐
-        │                           │                           │
-        │                           │                           │
-+--------------------+     +--------------------+     +--------------------+
-|   Windows Server   |     |   Ubuntu Server    |     |  Windows Client    |
-|--------------------|     |--------------------|     |--------------------|
-| Active Directory   |     | Wazuh SIEM         |     | Domain Joined      |
-| DNS Server         |     | Dashboard          |     | Enterprise Client  |
-| DHCP Server        |     | Indexer            |     | GPO Applied        |
-| Group Policies     |     | Manager            |     |                    |
-+--------------------+     +--------------------+     +--------------------+
+```mermaid
+flowchart TD
+
+    Internet((Internet))
+    WAN[WAN Interface<br/>Bridged Adapter]
+
+    PF["pfSense Community Edition<br/><br/>• Firewall<br/>• NAT<br/>• OpenVPN<br/>• Squid<br/>• SquidGuard<br/>• Snort IDS/IPS"]
+
+    LAN["LAN Network<br/>Host-Only"]
+
+    WS["Windows Server<br/><br/>• Active Directory<br/>• DNS Server<br/>• DHCP Server<br/>• Group Policy"]
+
+    UBU["Ubuntu Server<br/><br/>• Wazuh Manager<br/>• Wazuh Indexer<br/>• Wazuh Dashboard"]
+
+    CLIENT["Windows Client<br/><br/>• Domain Joined<br/>• Enterprise Workstation<br/>• GPO Applied"]
+
+    Internet --> WAN
+    WAN --> PF
+    PF --> LAN
+
+    LAN --> WS
+    LAN --> UBU
+    LAN --> CLIENT
 ```
 
 ---
