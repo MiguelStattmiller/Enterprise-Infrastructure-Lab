@@ -139,15 +139,15 @@ Scope configuration:
 
 The Windows Server has been configured following basic security best practices.
 
-Implemented security controls:
-
-- Windows Defender Firewall enabled
-- Windows Defender Antivirus enabled
-- Static IP configuration
-- Domain-based authentication
-- Active Directory integrated DNS
-- Centralized DHCP management
-- Remote Desktop disabled
-- Remote Management enabled
+| Security Control | Status |
+|------------------|--------|
+| Windows Defender Firewall | Enabled |
+| Windows Defender Antivirus | Enabled |
+| Static IPv4 Configuration | Configured |
+| Domain-Based Authentication | Enabled |
+| Active Directory Integrated DNS | Enabled |
+| Centralized DHCP Management | Configured |
+| Remote Desktop | Disabled |
+| Remote Management | Enabled |
 
 ---
