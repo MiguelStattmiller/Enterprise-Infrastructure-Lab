@@ -10,15 +10,16 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ## Objectives
 
-- Deploy pfSense as the network gateway
+- Deploy pfSense Community Edition as the perimeter firewall
 - Configure WAN and LAN interfaces
-- Configure DHCP and DNS services
-- Implement firewall rules following the principle of least privilege
-- Configure Network Address Translation (NAT)
-- Create and manage VLANs
-- Configure secure remote access (VPN)
-- Monitor firewall logs and traffic
-- Document every configuration step
+- Configure IPv4 networking
+- Implement firewall rules
+- Configure OpenVPN remote access
+- Create an internal Certificate Authority (CA)
+- Deploy Squid Proxy
+- Configure SquidGuard URL filtering
+- Deploy Snort IDS/IPS
+- Document the complete firewall configuration
 
 ---
 
@@ -49,16 +50,17 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ---
 
-## Procedures
+## Configuration Sections
 
-- [ ] VM Installation and configuration
-- [ ] pfSense Configuration
-- [ ] WAN Configuration
-- [ ] LAN Configuration
-- [ ] Firewall Rules
-- [ ] NAT Configuration
-- [ ] VPN Configuration
-- [ ] Backup & Restore
+- VM Installation and Configuration
+- WAN Interface Configuration
+- LAN Interface Configuration
+- Firewall Rules
+- Certificate Authority
+- OpenVPN
+- Squid Proxy
+- SquidGuard
+- Snort IDS/IPS
 
 ---
 
