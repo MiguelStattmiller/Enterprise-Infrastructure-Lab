@@ -46,7 +46,7 @@ flowchart TD
     CLIENT --> WS
     LAN --> PF
 
----
+
 
 ## Configuration Sections
 
