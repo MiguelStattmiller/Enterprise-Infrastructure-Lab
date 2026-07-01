@@ -124,8 +124,10 @@ It is prepared for integration with Wazuh SIEM to provide centralized alert mana
 
 # Service Status
 
+The following table summarizes the operational status of the main pfSense services configured in this laboratory.
+
 | Feature | Status |
-|----------|--------|
+|---------|--------|
 | WAN Interface | ✅ Configured |
 | LAN Interface | ✅ Configured |
 | NAT | ✅ Enabled |
@@ -137,7 +139,11 @@ It is prepared for integration with Wazuh SIEM to provide centralized alert mana
 | Snort IDS/IPS | ✅ Operational |
 | IPv6 | ❌ Disabled |
 
-![Services Status](../Screenshots/12-Service-Status.png)
+The screenshot below confirms the runtime status of the deployed services.
+
+![Service Status](../Screenshots/12-Service-Status.png)
+
+> **Note:** Optional services such as ClamAV, c-icap and Lightsquid were not configured as they are outside the scope of this project.
 
 ---
 
