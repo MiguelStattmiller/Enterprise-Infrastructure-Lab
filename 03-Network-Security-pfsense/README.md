@@ -8,19 +8,6 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ---
 
-## Objectives
-
-- Deploy pfSense Community Edition as the perimeter firewall
-- Configure WAN and LAN interfaces
-- Configure IPv4 networking
-- Implement firewall rules
-- Configure OpenVPN remote access
-- Create an internal Certificate Authority (CA)
-- Deploy Squid Proxy
-- Configure SquidGuard URL filtering
-- Deploy Snort IDS/IPS
-- Document the complete firewall configuration
-
 ## pfSense Architecture
 
 ```mermaid
@@ -42,6 +29,21 @@ flowchart TD
     LAN --> LAB
 ```
 ---
+
+
+## Objectives
+
+- Deploy pfSense Community Edition as the perimeter firewall
+- Configure WAN and LAN interfaces
+- Configure IPv4 networking
+- Implement firewall rules
+- Configure OpenVPN remote access
+- Create an internal Certificate Authority (CA)
+- Deploy Squid Proxy
+- Configure SquidGuard URL filtering
+- Deploy Snort IDS/IPS
+- Document the complete firewall configuration
+
 
 ## Configuration Sections
 
