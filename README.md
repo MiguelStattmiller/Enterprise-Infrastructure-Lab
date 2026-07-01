@@ -53,6 +53,7 @@ The objective of this project is to simulate a realistic enterprise infrastructu
 - Implement SIEM monitoring using Wazuh
 - Configure IDS/IPS with Snort
 - Practice troubleshooting and systems integration
+- Enterprise Documentation
 
 ---
 
@@ -97,7 +98,7 @@ The objective of this project is to simulate a realistic enterprise infrastructu
 | Windows Infrastructure | Active Directory, DNS, DHCP |
 | Linux | Ubuntu Server |
 | Containers | Docker |
-| Security | Nmap |
+| Security Testing | Nmap |
 
 ---
 
@@ -112,8 +113,8 @@ The objective of this project is to simulate a realistic enterprise infrastructu
 06-wazuh-siem/
 07-snort/
 08-security-testing/
-09-python-automation/
-10-documentation/
+
+
 
 
 
