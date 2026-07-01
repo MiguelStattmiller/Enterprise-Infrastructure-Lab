@@ -45,3 +45,33 @@ flowchart TD
     WS --> GPO["Group Policy"]
     CLIENT --> WS
     LAN --> PF
+
+---
+
+## Configuration Sections
+
+- VM Installation and Configuration
+- Static IPv4 Configuration
+- Active Directory Domain Services
+- Domain Controller Promotion
+- DNS Configuration
+- DHCP Configuration
+- Organizational Units
+- Users and Groups
+- Group Policy Objects
+- Windows Client Domain Join
+
+---
+
+## Folder Structure
+
+01-Windows-Server/
+├── README.md
+├── Screenshots/
+│   └── Deployment and configuration screenshots
+└── configs/
+    ├── VM-Configuration.md
+    └── Windows-Server-Configuration.md
+
+
+---
