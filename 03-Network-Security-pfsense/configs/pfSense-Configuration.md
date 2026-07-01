@@ -35,12 +35,13 @@ Two interfaces were configured.
 
 The WAN interface is configured in **DHCP mode** using a **Bridged Adapter**, allowing the firewall to obtain an IPv4 address from the external network.
 
-Configuration:
+| Configuration | Value |
+|---------------|-------|
+| IPv4 Configuration | DHCP |
+| Network Adapter | Bridged |
+| Interface | WAN |
+| Purpose | Internet Connectivity |
 
-- IPv4 Configuration: DHCP
-- Network Adapter: Bridged
-- Interface: WAN
-- Purpose: Internet connectivity
 
 ---
 
@@ -48,11 +49,11 @@ Configuration:
 
 The LAN interface provides the internal enterprise network used by the laboratory virtual machines.
 
-Configuration:
-
-- DHCP Server: Disabled (provided by Windows Server)
-- IPv4: Static IPv4
-- Default Gateway for internal hosts
+| Configuration | Value |
+|---------------|-------|
+| DHCP Server | Disabled (provided by Windows Server) |
+| IPv4 Configuration | Static IPv4 |
+| Default Gateway | Configured for internal hosts |
 
 ---
 
@@ -62,10 +63,10 @@ Configuration:
 
 Only the OpenVPN service is exposed externally.
 
-| Action | Protocol | Port | Purpose |
-|---------|----------|------|---------|
+| Rule | Protocol | Port | Purpose |
+|------|----------|------|---------|
 | Allow | UDP | 1194 | OpenVPN Remote Access |
-| Implicit Deny | Any | Any | Block all other inbound traffic |
+| Default Policy | Any | Any | Deny all other inbound traffic |
 
 ![WAN Firewall Rules](../Screenshots/08-WAN-Firewall-Rules.png)
 
@@ -75,8 +76,8 @@ Only the OpenVPN service is exposed externally.
 
 Internal clients are allowed outbound connectivity.
 
-| Action | Source | Destination | Purpose |
-|---------|--------|-------------|---------|
+| Rule | Source | Destination | Purpose |
+|------|--------|-------------|---------|
 | Allow | LAN | Any | Allow outbound traffic |
 | Anti-Lockout | LAN | Firewall | Prevent administrative lockout |
 
