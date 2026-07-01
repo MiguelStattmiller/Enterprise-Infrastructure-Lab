@@ -169,14 +169,14 @@ Configured for:
 
 # Snort IDS/IPS
 
-Snort is deployed as the network Intrusion Detection and Prevention System.
+Snort was deployed on the WAN interface to provide intrusion detection and prevention capabilities using community rule sets.
 
-Current capabilities:
+Configuration
 
-- Network intrusion detection
-- Rule-based inspection
-- Traffic analysis
-- Security event generation
+- Interface: WAN
+- Blocking Mode: Legacy
+- Pattern Matching: AC-BNFA
+- Rule Set: Community Rules
 
 ---
 
