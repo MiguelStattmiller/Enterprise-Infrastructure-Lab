@@ -1,6 +1,6 @@
 # Windows Server 2022 - Configuration
 
-This document describes the configuration implemented on **Microsoft Windows Server 2022 Datacenter Evaluation** as the central identity, DNS and DHCP server for the Enterprise Infrastructure Lab.
+This document describes the configuration implemented on **Microsoft Windows Server 2022 Datacenter Evaluation** for the Enterprise Infrastructure Lab.
 
 ---
 
