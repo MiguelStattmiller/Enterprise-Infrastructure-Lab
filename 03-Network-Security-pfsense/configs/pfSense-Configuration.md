@@ -85,7 +85,6 @@ The LAN interface provides the internal enterprise network used by the laborator
 
 Configuration:
 
-- IPv4 Address: xxx.xxx.xxx.xxx/24
 - DHCP Server: Disabled (provided by Windows Server)
 - IPv6: Disabled
 - Default Gateway for internal hosts
