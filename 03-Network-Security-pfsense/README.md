@@ -58,9 +58,6 @@ The objective is to simulate a small enterprise environment by implementing secu
 - [ ] Firewall Rules
 - [ ] NAT Configuration
 - [ ] VPN Configuration
-- [ ] Port Forwarding
-- [ ] Aliases
-- [ ] Logging & Monitoring
 - [ ] Backup & Restore
 
 ---
