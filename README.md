@@ -103,10 +103,10 @@ flowchart TD
 # 📂 Repository Structure
 
 ```
-01-windows-server/
-02-wazuh-siem/
-03-network-security-pfsense/
-04-validation/
+01-Windows-Server/
+02-Wazuh-SIEM/
+03-Network-Security-pfsense/
+04-Validation/
 
 
 
