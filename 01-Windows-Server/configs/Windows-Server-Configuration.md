@@ -46,15 +46,16 @@ The following screenshot shows the deployed Windows Server version together with
 
 The Local Server console summarizes the core operating system configuration.
 
-Configuration:
+| Configuration | Status |
+|--------------|--------|
+| Hostname | Configured |
+| Domain Membership | Joined |
+| Windows Defender Firewall | Enabled |
+| Remote Management | Enabled |
+| Remote Desktop | Disabled |
+| IPv4 Configuration | Static |
+| Windows Defender Antivirus | Enabled |
 
-- Hostname configured
-- Domain joined
-- Windows Defender Firewall enabled
-- Remote Management enabled
-- Remote Desktop disabled
-- Static IPv4 configuration
-- Windows Defender Antivirus enabled
 
 ![Local Server](../Screenshots/04-Local-Server.png)
 
@@ -64,14 +65,14 @@ Configuration:
 
 Windows Defender Firewall provides the first layer of protection for the Windows Server.
 
-Configuration:
-
-- Domain Profile enabled
-- Private Profile enabled
-- Public Profile enabled
-- Inbound traffic restricted
-- Outbound traffic allowed
-- Group Policy managed configuration
+| Feature | Status |
+|---------|--------|
+| Domain Profile | Enabled |
+| Private Profile | Enabled |
+| Public Profile | Enabled |
+| Inbound Traffic | Restricted |
+| Outbound Traffic | Allowed |
+| Group Policy Management | Enabled |
 
 ![Windows Defender Firewall](../Screenshots/05-Windows-Defender.png)
 
