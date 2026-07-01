@@ -72,7 +72,6 @@ The WAN interface is configured in **DHCP mode** using a **Bridged Adapter**, al
 Configuration:
 
 - IPv4 Configuration: DHCP
-- IPv6: Disabled
 - Network Adapter: Bridged
 - Interface: WAN
 - Purpose: Internet connectivity
@@ -86,7 +85,7 @@ The LAN interface provides the internal enterprise network used by the laborator
 Configuration:
 
 - DHCP Server: Disabled (provided by Windows Server)
-- IPv6: Disabled
+- IPv4: Static IPv4
 - Default Gateway for internal hosts
 
 ---
