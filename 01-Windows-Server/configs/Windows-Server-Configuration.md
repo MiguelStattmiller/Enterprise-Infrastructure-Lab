@@ -91,14 +91,14 @@ Active Directory Users and Computers (ADUC) provides the classic administrative 
 
 The DNS Server is integrated with Active Directory and provides internal name resolution for the laboratory environment.
 
-Configuration:
-
-- Active Directory Integrated Zone
-- Forward Lookup Zone
-- SOA Record
-- NS Record
-- Host (A) Records
-- Automatic Active Directory registration
+| Configuration | Status |
+|--------------|--------|
+| Active Directory Integrated Zone | Configured |
+| Forward Lookup Zone | Configured |
+| SOA Record | Present |
+| NS Record | Present |
+| Host (A) Records | Configured |
+| Automatic Active Directory Registration | Enabled |
 
 ![DNS Manager](../Screenshots/07-DNS-Manager.png)
 
