@@ -107,12 +107,10 @@ The objective of this project is to simulate a realistic enterprise infrastructu
 ```
 01-network-design/
 02-virtualization/
-03-pfsense-firewall/
+03-network-security-pfsense/
 04-windows-server/
-05-linux-server/
-06-wazuh-siem/
-07-snort/
-08-security-testing/
+05-wazuh-siem/
+06-validation/
 
 
 
