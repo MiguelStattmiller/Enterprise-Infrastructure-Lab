@@ -37,10 +37,6 @@ The following screenshot shows the deployed Windows Server version together with
 |-----------|-------|
 | Operating System | Windows Server 2022 Datacenter Evaluation |
 | Hostname | DC1 |
-| Virtualization | QEMU |
-| CPU | 2 vCPU |
-| Memory | 4 GB RAM |
-| Storage | 64 GB |
 
 ![System Information](../Screenshots/03-System-Information.png)
 
