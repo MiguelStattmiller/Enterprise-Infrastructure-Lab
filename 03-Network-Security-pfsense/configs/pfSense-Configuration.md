@@ -180,7 +180,7 @@ Configuration
 
 ---
 
-# Configuration Highlights
+# Service Status
 
 | Feature | Status |
 |----------|--------|
