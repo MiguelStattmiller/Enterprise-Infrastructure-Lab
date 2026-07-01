@@ -88,12 +88,6 @@ Internal clients are allowed outbound connectivity.
 
 An internal Certificate Authority (CA) was created for OpenVPN certificate authentication.
 
-Purpose:
-
-- Issue VPN certificates
-- Authenticate VPN clients
-- Manage certificate trust
-
 ![Certificate Authority](../Screenshots/07-Certificate-Authority.png)
 
 ---
