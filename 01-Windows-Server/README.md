@@ -29,24 +29,30 @@ The objective is to simulate a small enterprise environment by implementing cent
 ```mermaid
 flowchart TD
 
+    PF["pfSense<br/>Firewall / Gateway"]
+
     LAN["LAN Network<br/>Host-Only"]
 
     WS["Windows Server<br/><br/>Domain Controller<br/>DNS Server<br/>DHCP Server<br/>Group Policy"]
 
     CLIENT["Windows Client<br/><br/>Domain Joined<br/>Enterprise Workstation"]
 
-    PF["pfSense<br/>Default Gateway"]
+    AD["Active Directory"]
+    DNS["DNS"]
+    DHCP["DHCP"]
+    GPO["Group Policy"]
 
+    PF --> LAN
     LAN --> WS
     LAN --> CLIENT
-    WS --> AD["Active Directory"]
-    WS --> DNS["DNS"]
-    WS --> DHCP["DHCP"]
-    WS --> GPO["Group Policy"]
+
+    WS --> AD
+    WS --> DNS
+    WS --> DHCP
+    WS --> GPO
+
     CLIENT --> WS
-    LAN --> PF
-
-
+```
 
 ## Configuration Sections
 
