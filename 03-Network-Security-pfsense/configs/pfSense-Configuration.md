@@ -4,38 +4,6 @@ This document describes the configuration implemented on **pfSense Community Edi
 
 ---
 
-# Architecture
-
-The firewall is positioned between the Internet and the isolated enterprise network.
-
-```text
-              Internet
-                  │
-            WAN (DHCP)
-                  │
-        +------------------+
-        |     pfSense      |
-        | Firewall/Gateway |
-        +------------------+
-                  │
-                 LAN 
-                  │
-        Enterprise Lab Network
-```
-
-Main responsibilities:
-
-- Internet gateway
-- Stateful firewall
-- Network Address Translation (NAT)
-- OpenVPN Remote Access
-- Certificate Authority
-- Squid Proxy
-- SquidGuard URL Filtering
-- Snort IDS/IPS
-
----
-
 # System Overview
 
 The firewall was successfully deployed using **pfSense Community Edition 2.7.2** on a dedicated virtual machine hosted in **UTM for macOS**.
