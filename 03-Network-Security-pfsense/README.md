@@ -70,15 +70,10 @@ The objective is to simulate a small enterprise environment by implementing secu
 03-Network-Security-pfSense/
 ├── README.md
 ├── Screenshots/
-├── configs/
-│   ├── VM-Configuration.md
-│   ├── pfSense-Configuration.md
-│   ├── Firewall-Rules.md
-│   ├── OpenVPN.md
-│   ├── Snort.md
-│   └── Squid.md
-├── backups/
-└── exports/
+│   └── Deployment and configuration screenshots
+└── configs/
+    ├── VM-Configuration.md
+    └── pfSense-Configuration.md
 ```
 
 ---
