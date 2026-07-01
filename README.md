@@ -25,7 +25,7 @@ Design, deployment and documentation of a complete enterprise infrastructure lab
 
 This project is part of my **Enterprise Infrastructure Lab**, a virtual enterprise environment built using **UTM on macOS**.
 
-The laboratory demonstrates the deployment and integration of enterprise networking, Windows infrastructure, and Security Information and Event Management (SIEM) technologies.
+The laboratory demonstrates the deployment and integration of enterprise networking, Windows infrastructure, Security Information and Event Management (SIEM) technologies.
 
 The environment consists of:
 
