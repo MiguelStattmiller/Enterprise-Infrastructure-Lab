@@ -90,12 +90,6 @@ Configuration:
 
 ---
 
-# IPv6
-
-IPv6 was intentionally disabled across the laboratory to simplify the environment and focus on IPv4 enterprise networking.
-
----
-
 # Firewall Rules
 
 ## WAN
