@@ -188,9 +188,9 @@ Snort is prepared for integration with Wazuh SIEM to provide centralized alert m
 | Firewall | ✅ Configured |
 | OpenVPN | ✅ Operational |
 | Certificate Authority | ✅ Created |
-| Squid | ✅ Installed |
-| SquidGuard | ✅ Installed |
-| Snort IDS/IPS | ✅ Installed |
+| Squid | ✅ Operational |
+| SquidGuard | ✅ Operational |
+| Snort IDS/IPS | ✅ Operational |
 | IPv6 | ❌ Disabled |
 
 ![Services Status](../Screenshots/12-Service-Status.png)
