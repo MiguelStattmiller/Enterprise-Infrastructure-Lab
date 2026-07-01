@@ -18,7 +18,7 @@ The firewall is positioned between the Internet and the isolated enterprise netw
         | Firewall/Gateway |
         +------------------+
                   │
-        LAN 192.168.20.0/24
+                 LAN 
                   │
         Enterprise Lab Network
 ```
