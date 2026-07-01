@@ -71,17 +71,19 @@ The environment consists of:
 
 ---
 
-# 🎯 Objectives
+## 🎯 Objectives
 
-- Design an enterprise network architecture
-- Deploy and configure pfSense Firewall
-- Configure Windows Server infrastructure
-- Implement Active Directory, DNS and DHCP
-- Deploy Ubuntu Server services
-- Implement SIEM monitoring using Wazuh
-- Configure IDS/IPS with Snort
-- Practice troubleshooting and systems integration
-- Enterprise Documentation
+| Objective | Description |
+|-----------|-------------|
+| Enterprise Network | Design an enterprise network architecture |
+| pfSense Firewall | Deploy and configure pfSense Firewall |
+| Windows Server | Configure Windows Server infrastructure |
+| Active Directory | Implement Active Directory, DNS and DHCP services |
+| Ubuntu Server | Deploy Ubuntu Server services |
+| SIEM | Implement security monitoring using Wazuh |
+| IDS/IPS | Configure Snort IDS/IPS |
+| Systems Integration | Practice troubleshooting and systems integration |
+| Documentation | Produce complete enterprise documentation |
 
 ---
 
