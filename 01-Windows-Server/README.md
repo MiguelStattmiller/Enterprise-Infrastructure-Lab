@@ -71,6 +71,7 @@ flowchart TD
 
 ## Folder Structure
 
+```text
 01-Windows-Server/
 ├── README.md
 ├── Screenshots/
@@ -78,6 +79,6 @@ flowchart TD
 └── configs/
     ├── VM-Configuration.md
     └── Windows-Server-Configuration.md
-
+```
 
 ---
