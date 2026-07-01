@@ -66,7 +66,7 @@ The environment consists of:
                                             │
                                     +----------------+
                                     |    pfSense     |
-                                    | Firewall/GW    |
+                                    |    Firewall    |
                                     +----------------+
                                             │
                                     LAN (Host-Only)
