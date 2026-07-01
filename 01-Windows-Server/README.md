@@ -2,9 +2,9 @@
 
 ## Overview
 
-This section documents the deployment and configuration of **Microsoft Windows Server 2022** as the core infrastructure server for the Enterprise Infrastructure Lab.
+This section documents the deployment and configuration of Microsoft Windows Server 2022 as the core infrastructure server for the Enterprise Infrastructure Lab.
 
-The server provides centralized authentication, directory services, name resolution, dynamic IP address allocation and storage services for the laboratory environment, integrating with the pfSense firewall and future Windows domain clients.
+The server provides centralized authentication, directory services, DNS name resolution, DHCP-based IP address allocation and file services for the laboratory environment. It integrates with the pfSense firewall and serves as the central infrastructure platform for Windows domain clients.
 
 ---
 
