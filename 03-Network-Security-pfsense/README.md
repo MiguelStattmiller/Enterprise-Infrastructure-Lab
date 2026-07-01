@@ -33,21 +33,24 @@ The objective is to simulate a small enterprise environment by implementing secu
 
 ## pfSense Architecture
 
-```text
-                    Internet
-                        │
-                 WAN (Bridged)
-                        │
-              +------------------+
-              |     pfSense      |
-              | Firewall/Gateway |
-              +------------------+
-                        │
-                 LAN (Host-Only)
-                        │
-          Enterprise Infrastructure Lab
-```
+```mermaid
+flowchart TD
 
+    Internet((Internet))
+
+    WAN["WAN Interface<br/>Bridged Adapter"]
+
+    PF["pfSense Community Edition<br/><br/>Firewall / Gateway"]
+
+    LAN["LAN Interface<br/>Host-Only"]
+
+    LAB["Enterprise Infrastructure Lab"]
+
+    Internet --> WAN
+    WAN --> PF
+    PF --> LAN
+    LAN --> LAB
+```
 ---
 
 ## Configuration Sections
