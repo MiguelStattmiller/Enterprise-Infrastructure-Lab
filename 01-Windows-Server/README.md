@@ -2,58 +2,36 @@
 
 ## Overview
 
-This section documents the deployment and configuration of **Windows Server** as the core infrastructure server for the Enterprise Infrastructure Lab.
+This section documents the deployment and configuration of **Microsoft Windows Server 2022** as the core infrastructure server for the Enterprise Infrastructure Lab.
 
-The objective is to simulate a small enterprise environment by implementing centralized identity management, name resolution, IP address management and administrative policy enforcement.
-
----
-
-## Objectives
-
-- Deploy Windows Server in the lab environment
-- Configure static IPv4 networking
-- Install and configure Active Directory Domain Services
-- Promote the server to a Domain Controller
-- Configure DNS services
-- Configure DHCP services
-- Create Organizational Units (OUs)
-- Create users and groups
-- Configure Group Policy Objects (GPOs)
-- Join a Windows Client to the domain
-- Document the complete Windows Server configuration
+The server provides centralized authentication, directory services, name resolution, dynamic IP address allocation and storage services for the laboratory environment, integrating with the pfSense firewall and future Windows domain clients.
 
 ---
 
-# Infrastructure Overview
+## Infrastructure Overview
 
 ```mermaid
 flowchart LR
 
     Internet((Internet))
 
-    pfSense["pfSense 2.7.2
-    Firewall / VPN / IDS"]
+    pfSense["pfSense CE 2.7.2<br/>Firewall / VPN / IDS"]
 
-    DC["Windows Server 2022
-    Domain Controller"]
+    DC["Windows Server 2022<br/>DC1"]
 
-    AD["Active Directory
-    Domain Services"]
+    AD["Active Directory<br/>Domain Services"]
 
     DNS["DNS Server"]
 
     DHCP["DHCP Server"]
 
-    FW["Windows Defender
-    Firewall"]
+    FW["Windows Defender<br/>Firewall"]
 
-    FS["File & Storage
-    Services"]
+    FS["File & Storage<br/>Services"]
 
-    Clients["Domain Clients"]
+    Clients["Windows Clients"]
 
     Internet --> pfSense
-
     pfSense --> DC
 
     DC --> AD
@@ -62,27 +40,44 @@ flowchart LR
     DC --> FW
     DC --> FS
 
-    DHCP --> Clients
-    DNS --> Clients
     AD --> Clients
+    DNS --> Clients
+    DHCP --> Clients
 ```
 
 ---
 
-## Configuration Sections
+## Objectives
 
-- VM Installation and Configuration
-- Static IPv4 Configuration
-- Active Directory Domain Services
-- Domain Controller Promotion
-- DNS Configuration
-- DHCP Configuration
-- Organizational Units
-- Users and Groups
-- Group Policy Objects
-- Windows Client Domain Join
+- Deploy Microsoft Windows Server 2022
+- Configure a static IPv4 address
+- Deploy Active Directory Domain Services (AD DS)
+- Promote the server to a Domain Controller
+- Configure DNS Server
+- Configure DHCP Server
+- Configure Windows Defender Firewall
+- Prepare the environment for Windows domain clients
+- Document the complete infrastructure
+  
+---
+
+
+
+## Implemented Services
+
+| Service | Status |
+|----------|:------:|
+| Windows Server 2022 | ✅ |
+| Static IPv4 Configuration | ✅ |
+| Active Directory Domain Services | ✅ |
+| Domain Controller | ✅ |
+| DNS Server | ✅ |
+| DHCP Server | ✅ |
+| Windows Defender Firewall | ✅ |
+| File & Storage Services | ✅ |
 
 ---
+
 
 ## Folder Structure
 
