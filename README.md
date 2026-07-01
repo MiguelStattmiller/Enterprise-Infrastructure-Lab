@@ -23,17 +23,16 @@ Design, deployment and documentation of a complete enterprise infrastructure lab
 
 ## Project Overview
 
-This project is part of my **Enterprise Infrastructure Lab**, a virtual enterprise environment built entirely using **UTM on macOS**.
+This project is part of my **Enterprise Infrastructure Lab**, a virtual enterprise environment built using **UTM on macOS**.
 
-The lab simulates a small enterprise network composed of three virtual machines:
+The laboratory demonstrates the deployment and integration of enterprise networking, Windows infrastructure, and Security Information and Event Management (SIEM) technologies.
 
-- **pfSense Community Edition** – Enterprise firewall, network gateway, routing, NAT, DNS, DHCP, OpenVPN remote access, Snort IDS/IPS, Squid Proxy and SquidGuard web filtering.
-- **Windows Server** – Active Directory Domain Services (AD DS), DNS, DHCP integration, Organizational Units (OUs), Group Policy Objects (GPOs), centralized authentication and enterprise infrastructure management.
-- **Ubuntu Desktop** – Linux administration and deployment of the Wazuh SIEM platform for centralized log collection, monitoring and security event analysis.
+The environment consists of:
 
-The environment is intentionally configured as an **IPv4-only network**, with **IPv6 disabled** to reduce unnecessary complexity and maintain the focus on core enterprise infrastructure technologies. This approach simplifies the deployment of firewall policies, Active Directory, DNS, DHCP, VPN services and security monitoring without requiring parallel IPv6 configurations. IPv6 can be incorporated in future iterations of the lab as additional networking scenarios are developed.
-
-The objective of this project is to simulate a realistic enterprise infrastructure by integrating secure networking, centralized identity management, endpoint administration and security monitoring within an isolated virtual environment.
+- **pfSense Community Edition** – Firewall, gateway, NAT, OpenVPN, Squid Proxy, SquidGuard, and Snort IDS/IPS.
+- **Windows Server** – Active Directory, DNS, DHCP, Group Policy, and centralized identity management.
+- **Ubuntu Server** – Wazuh SIEM for centralized log collection, event correlation, security monitoring, and alerting.
+  
 ---
 
 > [!NOTE]
