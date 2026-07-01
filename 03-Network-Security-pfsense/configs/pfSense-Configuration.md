@@ -209,17 +209,5 @@ Current capabilities:
 
 ---
 
-# Next Steps
-
-The following integrations will be documented in subsequent sections of the Enterprise Infrastructure Lab:
-
-- Windows Server integration
-- Active Directory authentication
-- DNS forwarding
-- DHCP relay
-- Wazuh monitoring
-- Security event forwarding
-
----
 
 
