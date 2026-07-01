@@ -43,30 +43,6 @@ The VM uses two network interfaces:
 
 ---
 
-## Network Design
-
-```text
-                 Internet
-                     │
-               Wi-Fi (en0)
-                     │
-              WAN (Bridged)
-                     │
-              +---------------+
-              |    pfSense    |
-              +---------------+
-                     │
-              LAN (Host Only)
-                     │
-          Internal Lab Network
-             ┌──────────────┐
-             │              │
-      Windows Server   Ubuntu Desktop
-                         (Wazuh SIEM)
-```
-
----
-
 ## Purpose
 
 This virtual machine provides the network perimeter for the **Enterprise Infrastructure Lab** and will be used throughout the project to configure:
