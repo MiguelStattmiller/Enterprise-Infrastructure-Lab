@@ -43,18 +43,6 @@ The VM uses two network interfaces:
 
 ---
 
-## Purpose
-
-This virtual machine provides the network perimeter for the **Enterprise Infrastructure Lab** and will be used throughout the project to configure:
-
-- Firewall Rules
-- VPN
-- Network Routing
-- Traffic Monitoring
-- Secure Network Segmentation
-
----
-
 ## Screenshots
 
 ### System Configuration
