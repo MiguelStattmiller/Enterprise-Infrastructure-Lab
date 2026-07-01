@@ -1,185 +1,224 @@
 # pfSense Community Edition - Configuration
 
-This document describes the configuration performed on **pfSense Community Edition** for the **Enterprise Infrastructure Lab**.
+This document describes the configuration implemented on **pfSense Community Edition 2.7.2** as the perimeter firewall and network gateway for the Enterprise Infrastructure Lab.
 
 ---
 
-## Overview
+# Architecture
 
-pfSense is deployed as the **perimeter firewall and network gateway** of the Enterprise Infrastructure Lab.
+The firewall is positioned between the Internet and the isolated enterprise network.
 
-The firewall is responsible for controlling traffic between the Internet and the internal enterprise network while providing secure remote access and network security services.
+```text
+              Internet
+                  │
+            WAN (DHCP)
+                  │
+        +------------------+
+        |     pfSense      |
+        | Firewall/Gateway |
+        +------------------+
+                  │
+        LAN 192.168.20.0/24
+                  │
+        Enterprise Lab Network
+```
 
-The configuration includes:
+Main responsibilities:
 
-- WAN and LAN interfaces
-- Stateful Firewall
-- NAT
+- Internet gateway
+- Stateful firewall
+- Network Address Translation (NAT)
 - OpenVPN Remote Access
-- Certificate Authority (CA)
+- Certificate Authority
 - Squid Proxy
 - SquidGuard URL Filtering
 - Snort IDS/IPS
-- IPv6 disabled
-
-Unlike traditional pfSense deployments, **DNS**, **DHCP**, **Active Directory**, and **Group Policy Objects (GPOs)** are provided by the **Windows Server**, while pfSense operates strictly as the network gateway and security appliance.
 
 ---
 
-## System Overview
+# System Overview
 
-The pfSense firewall was successfully deployed and initialized with dedicated WAN and LAN interfaces.
+The firewall was successfully deployed using **pfSense Community Edition 2.7.2** on a dedicated virtual machine hosted in **UTM for macOS**.
 
-![pfSense Console](../Screenshots/04-pfSense-Console-Overview.png)
-
----
-
-## System Information
-
-The firewall is running **pfSense Community Edition 2.7.2** on a virtual machine hosted in **UTM for macOS**.
-
-![System Information](../Screenshots/05-System-Information.png)
+![System Overview](Screenshots/04-pfSense-Console-Overview.png)
 
 ---
 
-## Network Interfaces
+# System Information
+
+The following screenshot shows the deployed firewall version and hardware information.
+
+![System Information](Screenshots/05-System-Information.png)
+
+---
+
+# Network Interfaces
 
 Two interfaces were configured.
 
-| Interface | Purpose |
-|-----------|----------|
-| WAN | External network connectivity (Bridged Adapter) |
-| LAN | Internal enterprise network |
+| Interface | IP Assignment | Purpose |
+|------------|--------------|---------|
+| WAN | DHCP | Internet connectivity |
+| LAN | Static | Enterprise internal network |
 
-![Network Interfaces](../Screenshots/06-Network-Interfaces.png)
+![Interfaces](Screenshots/06-Network-Interfaces.png)
 
 ---
 
-## WAN Configuration
+# WAN Configuration
 
-The WAN interface receives its IPv4 configuration through DHCP from the external network.
+Configuration:
 
-Its primary functions are:
+- DHCP IPv4
+- Bridged Adapter
+- Internet-facing interface
+- OpenVPN endpoint
+
+Responsibilities:
 
 - Internet connectivity
-- OpenVPN endpoint
-- External firewall protection
+- Incoming VPN connections
+- External traffic filtering
 
 ---
 
-## LAN Configuration
+# LAN Configuration
 
-The LAN interface provides connectivity for the internal enterprise infrastructure.
+Configuration:
 
-The Windows Server uses this interface as its default gateway.
+- Static IPv4 network
+- Enterprise gateway
+- Default gateway for all internal systems
 
-Responsibilities include:
+Responsibilities:
 
 - Internal routing
-- Gateway services
-- Access to external networks
+- Internet access through NAT
+- Communication with Windows Server, Ubuntu Server and Windows Client
 
 ---
 
-## IPv6 Configuration
+# IPv6
 
-IPv6 was intentionally disabled across the laboratory.
-
-This simplifies the environment, keeps the project focused on IPv4 enterprise networking, and reduces unnecessary attack surface.
+IPv6 was intentionally disabled across the laboratory to simplify the environment and focus on IPv4 enterprise networking.
 
 ---
 
-## Firewall Rules
+# Firewall Rules
 
-### WAN Rules
+## WAN
 
 Only the OpenVPN service is exposed externally.
 
-![WAN Firewall Rules](../Screenshots/08-WAN-Firewall-Rules.png)
+| Action | Protocol | Port | Purpose |
+|---------|----------|------|---------|
+| Allow | UDP | 1194 | OpenVPN |
+| Block | Any | Any | Default deny |
+
+![WAN Rules](Screenshots/08-WAN-Firewall-Rules.png)
 
 ---
 
-### LAN Rules
+## LAN
 
-LAN clients are allowed outbound connectivity while inbound Internet traffic remains blocked by default.
+Internal clients are allowed outbound connectivity.
 
-![LAN Firewall Rules](../Screenshots/09-LAN-firewall-Rules.png)
+| Action | Source | Destination | Purpose |
+|---------|--------|-------------|---------|
+| Allow | LAN | Any | Internet access |
+| Anti-Lockout | LAN | Firewall | Web Management |
 
----
-
-## Certificate Authority
-
-An internal Certificate Authority (CA) was created for certificate-based VPN authentication.
-
-The CA is responsible for:
-
-- Issuing VPN certificates
-- Authenticating VPN clients
-- Managing certificate trust
-
-![Certificate Authority](../Screenshots/07-Certificate-Authority.png)
+![LAN Rules](Screenshots/09-LAN-Firewall-Rules.png)
 
 ---
 
-## OpenVPN
+# Certificate Authority
 
-OpenVPN provides encrypted remote access to the Enterprise Infrastructure Lab.
+An internal Certificate Authority (CA) was created for OpenVPN certificate authentication.
 
-Configuration includes:
+Purpose:
 
-- UDP transport
-- Certificate-based authentication
-- Dedicated VPN tunnel
-- Firewall integration
+- Issue VPN certificates
+- Authenticate VPN clients
+- Manage certificate trust
 
----
-
-## Proxy Services
-
-### Squid
-
-Squid provides:
-
-- HTTP/HTTPS proxy
-- Web caching
-- Traffic optimization
-
-### SquidGuard
-
-SquidGuard extends Squid with:
-
-- URL filtering
-- Website categorization
-- Access control
+![Certificate Authority](Screenshots/07-Certificate-Authority.png)
 
 ---
 
-## Snort IDS/IPS
+# OpenVPN
 
-Snort was deployed as the network Intrusion Detection and Prevention System.
+OpenVPN provides secure remote access to the Enterprise Infrastructure Lab.
 
-It will later be integrated with Wazuh to demonstrate:
+Configuration highlights:
 
-- Attack detection
-- Alert generation
-- Traffic blocking
-- Centralized monitoring
+- UDP Transport
+- Certificate Authentication
+- Dedicated VPN Tunnel
+- Firewall Integration
 
 ---
 
-## Services Summary
+# Proxy Services
 
-| Service | Purpose |
-|---------|---------|
-| Firewall | Traffic filtering |
-| NAT | Internet access |
-| OpenVPN | Secure remote access |
-| CA | VPN certificates |
-| Squid | Proxy server |
-| SquidGuard | Web filtering |
-| Snort | IDS/IPS |
+## Squid
 
-Infrastructure services such as **Active Directory**, **DNS**, **DHCP**, and **Group Policy Objects** are hosted on the Windows Server.
+Installed and configured to provide:
+
+- HTTP/HTTPS Proxy
+- Web Caching
+- Traffic Optimization
+
+## SquidGuard
+
+Configured for:
+
+- URL Filtering
+- Website Categorization
+- Access Policies
+
+---
+
+# Snort IDS/IPS
+
+Snort is deployed as the network Intrusion Detection and Prevention System.
+
+Current capabilities:
+
+- Network intrusion detection
+- Rule-based inspection
+- Traffic analysis
+- Security event generation
+
+---
+
+# Configuration Highlights
+
+| Feature | Status |
+|----------|--------|
+| WAN Interface | ✅ Configured |
+| LAN Interface | ✅ Configured |
+| NAT | ✅ Enabled |
+| Firewall | ✅ Configured |
+| OpenVPN | ✅ Operational |
+| Certificate Authority | ✅ Created |
+| Squid | ✅ Installed |
+| SquidGuard | ✅ Installed |
+| Snort IDS/IPS | ✅ Installed |
+| IPv6 | ❌ Disabled |
+
+---
+
+# Next Steps
+
+The following integrations will be documented in subsequent sections of the Enterprise Infrastructure Lab:
+
+- Windows Server integration
+- Active Directory authentication
+- DNS forwarding
+- DHCP relay
+- Wazuh monitoring
+- Security event forwarding
 
 ---
 
