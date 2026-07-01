@@ -29,9 +29,9 @@ The laboratory demonstrates the deployment and integration of enterprise network
 
 The environment consists of:
 
-- **pfSense Community Edition** – Firewall, gateway, NAT, OpenVPN, Squid Proxy, SquidGuard, and Snort IDS/IPS.
-- **Windows Server** – Active Directory, DNS, DHCP, Group Policy, and centralized identity management.
-- **Ubuntu Server** – Wazuh SIEM for centralized log collection, event correlation, security monitoring, and alerting.
+- **pfSense Community Edition** – Firewall, gateway, NAT, OpenVPN, Squid Proxy, SquidGuard and Snort IDS/IPS.
+- **Windows Server** – Active Directory, DNS, DHCP, Group Policy and centralized identity management.
+- **Ubuntu Server** – Wazuh SIEM for centralized log collection, event correlation, security monitoring and alerting.
   
 ---
 
