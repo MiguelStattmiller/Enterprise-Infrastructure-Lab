@@ -134,14 +134,16 @@ Purpose:
 
 # OpenVPN
 
-OpenVPN provides secure remote access to the Enterprise Infrastructure Lab.
-
+OpenVPN was configured to provide secure remote access to the Enterprise Infrastructure Lab using certificate-based authentication over UDP.
 Configuration highlights:
 
-- UDP Transport
-- Certificate Authentication
-- Dedicated VPN Tunnel
-- Firewall Integration
+Configuration
+
+- Interface: WAN
+- Protocol: UDP
+- Mode: Remote Access (User Auth)
+- Authentication: Certificate-based
+
 
 ---
 
