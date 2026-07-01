@@ -6,8 +6,6 @@ This document describes the configuration implemented on **pfSense Community Edi
 
 # System Overview
 
-The firewall was successfully deployed using **pfSense Community Edition 2.7.2** on a dedicated virtual machine hosted in **UTM for macOS**.
-
 ![System Overview](../Screenshots/04-pfSense-Console-Overview.png)
 
 ---
