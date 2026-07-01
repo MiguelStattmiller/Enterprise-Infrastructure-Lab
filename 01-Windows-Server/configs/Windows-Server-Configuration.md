@@ -4,51 +4,6 @@ This document describes the configuration implemented on **Microsoft Windows Ser
 
 ---
 
-# Infrastructure Overview
-
-```mermaid
-flowchart LR
-
-    Internet((Internet))
-
-    pfSense["pfSense 2.7.2
-    Firewall / VPN / IDS"]
-
-    DC["Windows Server 2022
-    Domain Controller"]
-
-    AD["Active Directory
-    Domain Services"]
-
-    DNS["DNS Server"]
-
-    DHCP["DHCP Server"]
-
-    FW["Windows Defender
-    Firewall"]
-
-    FS["File & Storage
-    Services"]
-
-    Clients["Domain Clients"]
-
-    Internet --> pfSense
-
-    pfSense --> DC
-
-    DC --> AD
-    DC --> DNS
-    DC --> DHCP
-    DC --> FW
-    DC --> FS
-
-    DHCP --> Clients
-    DNS --> Clients
-    AD --> Clients
-```
-
----
-
 # Active Directory Administrative Center
 
 The Active Directory Administrative Center provides the modern administrative interface used to manage the Active Directory environment.
